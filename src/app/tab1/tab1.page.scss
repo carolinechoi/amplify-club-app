@@ -1,4 +1,53 @@
-.welcome-card ion-img {
-  max-height: 35vh;
-  overflow: hidden;
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+$font: 'Karla';
+
+//colours
+$a: #2d2e2b;
+$l: #e6ebe5;
+
+ion-header {
+  ion-title {
+    font-family: $font;
+    letter-spacing: 1px;
+    color: $a;
+  }
+}
+ion-content {
+  font-family: $font;
+}
+ion-card {
+  font-family: $font;
+  #name, #name1  {
+    font-family: $font;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 35px;
+    margin-top: -30px;
+  }
+  ion-icon {
+    font-size: 15px;
+  }
+  #points, #points1 {
+    margin-top: -35px;
+    font-size: 15px;
+    position: absolute;
+    right: 15px;
+  }
+  #rank, #rank1 {
+    font-size: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+  }
+  #grade, #grade1 {
+    font-size: 15px;
+    color: #8e95a9;
+    margin-left: 35px;
+  }
+  #sub, #grade1, #points1, #name1, #rank1 {
+    color: white;
+  }
+  .list {
+    margin-top: 15px;
+  }
 }

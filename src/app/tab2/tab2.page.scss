@@ -1,1 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+$font: 'Karla';
+
+//colours
+$a: #2d2e2b;
+$l: #e6ebe5;
+
+ion-header {
+  ion-title {
+    font-family: $font;
+    letter-spacing: 1px;
+    color: $a;
+  }
+}
+ion-title, ion-content {
+  font-family: $font;
+  color: $a;
+}
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+ion-card {
+  ion-card-header, ion-card-content {
+    font-family: $font;
+    color: $a;
+  }
+  #location {
+    margin-top: 5px;
+    font-size: 15px;
+    text-transform: capitalize;
+  }
+  #points {
+    font-size: 17px;
+    float: right;
+    top: 15px;
+  }
+  ion-button {
+    font-family: $font;
+    font-size: 17px;
+  }
+}
+
 

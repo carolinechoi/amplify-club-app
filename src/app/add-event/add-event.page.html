@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ADD EVENT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-label position="stacked">Event Title</ion-label>
+        <ion-input type="text" [(ngModel)]="event.title"></ion-input>
+    </ion-item> 
+    <ion-item>
+        <ion-label position="stacked">Date</ion-label>
+        <ion-input placeholder="ex: 2/10" type="text" [(ngModel)]="event.date"></ion-input>
+    </ion-item>       
+    <ion-item>
+        <ion-label position="stacked">Event Description (two sentences-ish)</ion-label>
+        <ion-textarea type="text" placeholder="Two sentences-ish" [(ngModel)]="event.description"></ion-textarea>
+    </ion-item>      
+    <ion-item>
+        <ion-label position="stacked">Location</ion-label>
+        <ion-input type="text" placeholder="ex: Amelia Earhart Elementary School" [(ngModel)]="event.location"></ion-input>
+    </ion-item>          
+    <ion-item>
+        <ion-label position="stacked">Points</ion-label>
+        <ion-input inputmode="numeric" type="number" [(ngModel)]="event.points"></ion-input>
+    </ion-item>       
+    <ion-item>
+        <ion-label position="stacked">Link to Signup (FULL url, por favor)</ion-label>
+        <ion-input type="text" [(ngModel)]="event.link"></ion-input>
+    </ion-item>       
+    <ion-fab color="primary" (click)="addEvent(event)" vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+          <ion-icon name="arrow-round-forward"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

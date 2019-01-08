@@ -1,0 +1,9 @@
+<ion-content no-bounce padding>
+  <p>Enter the admin<br>top-secret<br>access code.</p>
+  <ion-input [(ngModel)]="code" inputmode="text" type="text"></ion-input>
+  <ion-fab color="primary" (click)="tryCode(code)" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="arrow-round-forward"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

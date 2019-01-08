@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+$font: 'Karla';
+
+//colours
+$a: #2d2e2b;
+$l: #e6ebe5;
+
+ion-content {
+    text-align: center;
+    p, ion-input {
+        color: $a;
+        font-family: $font;
+    }
+    p {
+        padding-top: 45%;
+        font-size: 30px;
+    }
+    ion-input {
+        display: table;
+        margin: 0 auto;
+        --background: $l;
+        background: $l;
+        width: 260px;
+        --color: $a;
+    }
+}

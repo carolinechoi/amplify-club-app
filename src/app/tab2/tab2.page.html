@@ -1,9 +1,30 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar mode="ios">
     <ion-title>
-      Tab Two
+      UPCOMING
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-fab *ngIf="admin$ == true" color="primary" vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="presentModal()">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+    <div class="cards" *ngFor="let event of eventRef | async">
+        <ion-card class="welcome-card">
+            <!-- (click)="itemTapped($event, event.$title=event.title, event.$date=event.date)" -->
+            <!-- <ion-img src="/assets/shapes.svg"></ion-img> -->
+            <ion-card-header>
+              <ion-card-title>{{event.title}}</ion-card-title>
+              <ion-card-subtitle id ="location">{{event.location}} | 📅 {{event.date}}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <p>{{event.description}}</p><br>
+              <ion-button href={{event.link}} fill="outline">Sign Up</ion-button>
+              <ion-card-subtitle id = "points">{{event.points}}<ion-icon color="primary" name="flash"></ion-icon></ion-card-subtitle>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

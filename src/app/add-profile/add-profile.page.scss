@@ -18,26 +18,10 @@ ion-title, ion-content {
   color: $a;
 }
 ion-item {
+    --padding-top: 10px;
     ion-input, ion-label {
         font-family: $font;
         color: $a;
     }
 }
-#name {
-    text-align: center;
-    font-family: $font;
-    color: $a;
-    font-weight: bold;
-    font-size: 30px;
-    margin-bottom: -2px;
-}
-ion-col {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.remindCode {
-    --font-family: $font;
-}
-
 

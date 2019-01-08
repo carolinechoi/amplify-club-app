@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>SIGNUP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Grade (number form)</ion-label>
+    <ion-input type="number" [(ngModel)]="user.grade"></ion-input>
+  </ion-item>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="makeProfile(user)">
+      <ion-icon name="arrow-round-forward"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

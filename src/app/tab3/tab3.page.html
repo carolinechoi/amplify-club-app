@@ -1,9 +1,46 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Three
+  <ion-toolbar mode="ios">
+    <ion-title *ngIf="currentUser">
+      MY PROFILE
+    </ion-title>
+    <ion-title *ngIf="currentUser == null">
+      LOG IN / SIGN UP
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <div *ngFor = "let user of current">
+      <p id="name">{{user.name}}</p><br>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">{{user.grade}}th</ion-col>
+          <ion-col size="6">{{user.points}}<ion-icon color="primary" name="flash"></ion-icon></ion-col>
+        </ion-row>
+      </ion-grid>
+  </div>
+  <ion-card *ngIf = "currentUser">
+    <ion-item (click)="signOut()">
+      <ion-label>😢 Sign Out</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label>✨ Cash My Points</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card *ngIf = "currentUser == null">
+    <ion-item href="/login">
+      <ion-label>🔑 Log In</ion-label>
+    </ion-item>
+    <ion-item lines="none" href="/signup">
+      <ion-label>😉 Sign Up</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item href="https://www.instagram.com/ahsxamplify/"> 
+      <ion-label>💫 Follow Us On Insta</ion-label>
+    </ion-item>
+    <ion-item (click)="remindCode()" lines="none">
+        <ion-label>💌 Join Our Remind</ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>
