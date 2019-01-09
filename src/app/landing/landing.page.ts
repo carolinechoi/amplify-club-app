@@ -10,7 +10,7 @@ import * as firebase from 'firebase';
   styleUrls: ['./landing.page.scss'],
 })
 export class LandingPage implements OnInit {
-
+  code: string;
   constructor(
     private router: Router,
     private toast: ToastController,

@@ -22,13 +22,7 @@ export class LoginPage implements OnInit {
     private route: Router,
     public toast: ToastController,
     public loadingController: LoadingController
-  ) {
-    firebase.auth().onAuthStateChanged((user: firebase.User) => {
-      if (user) {
-      } else {
-        this.route.navigateByUrl('/tabs/tab1');
-       }
-    });   }
+  ) {  }
 
   ngOnInit() {
   }
